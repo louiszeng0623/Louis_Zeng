@@ -4,10 +4,6 @@
 import argparse, json, os, re
 from datetime import datetime, timedelta, timezone
 
-# 输入 JSON 结构预期：列表[ {date, time, opponent, venue, competition, round, team} , ... ]
-# date: "YYYY-MM-DD", time: "HH:MM"（可能为空），为空则默认 20:00
-# 所有时间按 Asia/Shanghai 处理
-
 CST = timezone(timedelta(hours=8))
 
 def load_matches(paths):
@@ -23,7 +19,6 @@ def load_matches(paths):
                     all_rows.extend(data)
             except Exception as e:
                 print(f"[warn] bad json {p}: {e}")
-    # 去重 + 按日期时间排序
     def key(x):
         d = x.get("date","")
         t = x.get("time","") or "20:00"
@@ -46,7 +41,6 @@ def to_dt(dt_str, tm_str):
 
 def esc(s):
     if not s: return ""
-    # ics 需要转义逗号/分号/反斜杠/换行
     return re.sub(r'([,;\\])', r'\\\1', str(s)).replace("\n", "\\n")
 
 def make_ics(rows, cal_name):
@@ -58,29 +52,21 @@ def make_ics(rows, cal_name):
     lines.append("CALSCALE:GREGORIAN")
     lines.append("METHOD:PUBLISH")
     now = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-
     for r in rows:
         dt = to_dt(r.get("date",""), r.get("time",""))
-        if not dt: 
+        if not dt:
             continue
-        # 默认 2 小时
         dt_end = dt + timedelta(hours=2)
-
-        # 转 UTC（ICS 用 UTC 最兼容）
         dt_start_utc = dt.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
         dt_end_utc = dt_end.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-
-        team = r.get("team","").strip()
-        opp  = r.get("opponent","").strip()
-        comp = r.get("competition","").strip()
-        rnd  = r.get("round","").strip()
-        ven  = r.get("venue","").strip()
-
+        team = (r.get("team","") or "").strip()
+        opp  = (r.get("opponent","") or "").strip()
+        comp = (r.get("competition","") or "").strip()
+        rnd  = (r.get("round","") or "").strip()
+        ven  = (r.get("venue","") or "").strip()
         title = f"{team} vs {opp}" if team and opp else (team or opp or "Match")
         desc  = "；".join([x for x in [comp, rnd, ven] if x])
-
         uid = f"{r.get('date','')}-{esc(title)}-{esc(comp)}@louis_zeng.auto"
-
         lines.append("BEGIN:VEVENT")
         lines.append(f"UID:{uid}")
         lines.append(f"DTSTAMP:{now}")
@@ -92,17 +78,15 @@ def make_ics(rows, cal_name):
         if ven:
             lines.append(f"LOCATION:{esc(ven)}")
         lines.append("END:VEVENT")
-
     lines.append("END:VCALENDAR")
     return "\n".join(lines) + "\n"
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--in", dest="inputs", nargs="+", required=True, help="input JSON files")
-    ap.add_argument("--out", dest="out", required=True, help="output .ics path")
-    ap.add_argument("--name", dest="name", default="Matches", help="calendar name")
+    ap.add_argument("--in", dest="inputs", nargs="+", required=True)
+    ap.add_argument("--out", dest="out", required=True)
+    ap.add_argument("--name", dest="name", default="Matches")
     args = ap.parse_args()
-
     rows = load_matches(args.inputs)
     ics = make_ics(rows, args.name)
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
@@ -112,5 +96,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
+    
