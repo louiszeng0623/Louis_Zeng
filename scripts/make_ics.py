@@ -1,95 +1,75 @@
 # -*- coding: utf-8 -*-
 """
-把 data/schedule_2025.json 和 data/schedule_2026.json 转成 ICS：
-- data/ics/inter_2025.ics / inter_2026.ics
-- data/ics/chengdu_2025.ics / chengdu_2026.ics
-- data/ics/all_2025.ics / all_2026.ics
+make_ics.py
+自动生成国际米兰 & 成都蓉城的比赛日历（含提前提醒功能）
 """
-import os, json
+
+import json, os
 from datetime import datetime, timedelta
 
-SRC = ["data/schedule_2025.json", "data/schedule_2026.json"]
-OUT_DIR = "data/ics"
-DURATION_HOURS = 2  # 比赛默认时长
+def ensure_dir(p): os.makedirs(p, exist_ok=True)
 
-def read_json(path):
-    if not os.path.exists(path): return []
-    with open(path, "r", encoding="utf-8") as f:
-        try:
-            return json.load(f)
-        except Exception:
-            return []
-
-def to_ics_datetime(datestr, timestr):
+def load_json(path):
     try:
-        if not timestr:
-            timestr = "20:00"
-        dt = datetime.strptime(datestr + " " + timestr, "%Y-%m-%d %H:%M")
-    except Exception:
-        dt = datetime.strptime(datestr + " 20:00", "%Y-%m-%d %H:%M")
-    return dt.strftime("%Y%m%dT%H%M%S")
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except:
+        return []
 
-def build_ics(events, cal_name):
-    now = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
-    lines = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "PRODID:-//Louis_Zeng//Match Calendar//CN",
-        f"X-WR-CALNAME:{cal_name}"
-    ]
-    for ev in events:
-        dtstart = to_ics_datetime(ev["date"], ev.get("time",""))
-        start_dt = datetime.strptime(dtstart, "%Y%m%dT%H%M%S")
-        dtend = (start_dt + timedelta(hours=DURATION_HOURS)).strftime("%Y%m%dT%H%M%S")
-        uid = f"{ev['team']}-{ev['date']}-{ev.get('time','')}-{ev['opponent']}"
-        title = f"{ev['team']} vs {ev['opponent']}（{ev.get('competition','')}）"
-        location = ev.get("venue","")
-        desc = f"{ev.get('competition','')} {ev.get('round','')}".strip()
-        lines += [
-            "BEGIN:VEVENT",
-            f"UID:{uid}",
-            f"DTSTAMP:{now}",
-            f"DTSTART:{dtstart}",
-            f"DTEND:{dtend}",
-            f"SUMMARY:{title}",
-            f"LOCATION:{location}",
-            f"DESCRIPTION:{desc}",
-            "END:VEVENT"
-        ]
-    lines.append("END:VCALENDAR")
-    return "\n".join(lines)
+def to_ics_datetime(date_str, time_str):
+    try:
+        dt = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
+    except:
+        dt = datetime.strptime(f"{date_str} 20:00", "%Y-%m-%d %H:%M")
+    # 北京时间 → UTC
+    return (dt - timedelta(hours=8)).strftime("%Y%m%dT%H%M%SZ")
 
-def write_file(path, text):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8", newline="\n") as f:
-        f.write(text)
+def event_block(e):
+    start = to_ics_datetime(e["date"], e["time"])
+    end = to_ics_datetime(e["date"], e["time"])
+    summary = f"{e['team']} vs {e['opponent']}"
+    desc = f"{e.get('competition','')} {e.get('round','')} {e.get('venue','')}"
+    uid = f"{e['team']}-{e['date']}-{e['opponent']}".replace(" ","_")
+    return f"""BEGIN:VEVENT
+UID:{uid}@louis_zeng_schedule
+DTSTAMP:{datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")}
+DTSTART:{start}
+DTEND:{end}
+SUMMARY:{summary}
+DESCRIPTION:{desc}
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:比赛即将开始！⚽
+END:VALARM
+END:VEVENT
+"""
+
+def make_ics(data, year):
+    events = "\n".join([event_block(e) for e in data])
+    return f"""BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Louis_Zeng//MatchCalendar//CN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{events}
+END:VCALENDAR
+"""
 
 def main():
-    by_year_team = {}  # {(year, team): [events]}
-    for src in SRC:
-        data = read_json(src)
-        for ev in data:
-            y = ev["date"][:4]
-            key = (y, ev["team"])
-            by_year_team.setdefault(key, []).append(ev)
-
-    years = ["2025","2026"]
-    teams = set(k[1] for k in by_year_team.keys())
-
-    for y in years:
-        all_events = []
-        for t in teams:
-            evs = sorted(by_year_team.get((y,t), []), key=lambda e:(e["date"], e.get("time","")))
-            if not evs: continue
-            all_events += evs
-            ics = build_ics(evs, f"{t} {y}")
-            safe_team = "inter" if "国际米兰" in t else ("chengdu" if "成都" in t else "team")
-            write_file(f"{OUT_DIR}/{safe_team}_{y}.ics", ics)
-
-        all_events = sorted(all_events, key=lambda e:(e["date"], e.get('time','')))
-        if all_events:
-            ics_all = build_ics(all_events, f"All Teams {y}")
-            write_file(f"{OUT_DIR}/all_{y}.ics", ics_all)
+    ensure_dir("data/ics")
+    for year in [2025, 2026]:
+        path = f"data/schedule_{year}.json"
+        data = load_json(path)
+        if not data:
+            print(f"[{year}] 无数据，跳过")
+            continue
+        out = make_ics(data, year)
+        out_path = f"data/ics/matches_{year}.ics"
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(out)
+        print(f"[OK] 生成 {out_path} ({len(data)} 场)")
 
 if __name__ == "__main__":
     main()
+    
