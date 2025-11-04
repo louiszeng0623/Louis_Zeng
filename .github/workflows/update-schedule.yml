@@ -1,73 +1,69 @@
 name: Update Match Schedules
 
 on:
-  # 手动触发
-  workflow_dispatch:
-  # 每天北京时间 04:00 运行（UTC 20:00 == CST+8 的 04:00）
+  workflow_dispatch: {}
   schedule:
+    # 每天 UTC 20:00 触发 ≈ 北京时间次日 04:00
     - cron: "0 20 * * *"
-
-permissions:
-  contents: write
-
-concurrency:
-  group: update-schedule
-  cancel-in-progress: false
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    env:
-      TZ: Asia/Shanghai
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Python
+      - name: Setup Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install requirements
+      - name: Install deps
         run: |
-          python -m pip install -U pip
+          python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
 
-      # —— 这里会运行你的爬虫，生成 data/schedule_2025.json / data/schedule_2026.json —— #
-      - name: Scrape schedules (write JSON)
+      # ★ 你的爬虫：保持你原来能产出 schedule_2025.json / schedule_2026.json 的命令
+      - name: Run scraper (produce schedule_2025.json & schedule_2026.json)
+        env:
+          TZ: Asia/Shanghai
         run: |
           python scripts/scrape_teams.py
 
-      # —— 你要的“加上这两步”：生成合并 ICS + 提交 —— #
-
-      - name: Generate single ICS (2025–2026, both teams)
+      # ★ 生成合并的 ICS
+      - name: Build merged ICS
         run: |
           mkdir -p data/ics
-          python scripts/make_ics.py
+          python scripts/make_ics.py \
+            --in data/schedule_2025.json data/schedule_2026.json \
+            --out data/ics/matches_all.ics \
+            --name "Louis_Zeng 赛事合订(2025-2026)"
 
-      - name: Commit and push JSON & ICS
+      # ★ 确认 .ics 真的生成了
+      - name: Verify ICS exists
         run: |
-          git config --global user.name  "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          test -s data/ics/matches_all.ics || (echo "ICS not found or empty" && exit 1)
 
-          # 提交赛程 JSON、调试文本（若有）、以及合并后的 ICS
-          git add data/schedule_2025.json data/schedule_2026.json 2>/dev/null || true
-          git add data/_debug/*.txt 2>/dev/null || true
-          git add data/ics/matches_all.ics
+      # ★ 禁用 Jekyll，确保 .ics 会被 GitHub Pages 发布
+      - name: Add .nojekyll
+        run: |
+          touch .nojekyll
 
-          git commit -m "chore: auto-update schedules & ics $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
-          git push
+      # ★ 调试文件（可选）：把原始页面快照/解析结果放到 data/_debug（如果你脚本会产出）
+      - name: Ensure debug dir
+        run: |
+          mkdir -p data/_debug
 
-      # 可选：把关键产物打包成工件，便于排错/下载查看
-      - name: Upload debug artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
+      # ★ 提交改动
+      - name: Commit & push if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: debug-snapshots
-          path: |
-            data/_debug/*.txt
-            data/schedule_2025.json
-            data/schedule_2026.json
-            data/ics/matches_all.ics
-          if-no-files-found: ignore
-          
+          commit_message: "chore: auto-update schedules & ics ${{ github.run_id }}"
+          file_pattern: |
+            data/schedule_*.json
+            data/_debug/**
+            data/ics/*.ics
+            .nojekyll
+            
