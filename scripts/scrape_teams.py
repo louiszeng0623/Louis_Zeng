@@ -10,7 +10,7 @@
 字段：date, time, opponent, venue, competition, round, team
 """
 import os, re, json, time, urllib.parse, requests
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
 from bs4 import BeautifulSoup
 
 UA = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
@@ -138,9 +138,9 @@ def parse_team_page(html, team_name):
 
 # ----------------- 直播吧兜底通道 -----------------
 ZB_PAGES = [
+    "https://www.zhibo8.com/schedule/finish_more.htm",
     "https://www.zhibo8.com/schedule/all.htm",
     "https://www.zhibo8.com/zuqiu/zhongchao/",
-    "https://www.zhibo8.com/zuqiu/yaguan/",
     "https://www.zhibo8.com/zuqiu/yijia/",
     "https://www.zhibo8.com/zuqiu/ouguan/",
 ]
@@ -152,7 +152,6 @@ def parse_zhibo8(html, team_name):
     out = []
     for i, ln in enumerate(lines):
         if team_name in ln and (DATE_YMD.search(ln) or DATE_MD.search(ln)):
-            # 向前后各取几行凑一个 block
             block = clean(" ".join(lines[max(0,i-2): i+6]))
             m_t = TIME_HM.search(block)
             hhmm = m_t.group(0) if m_t else "20:00"
@@ -167,7 +166,6 @@ def parse_zhibo8(html, team_name):
                 a,b = block.split(" vs ",1)
                 opp = a if team_name in b else b
             else:
-                # 兜底：取 team_name 左右最近的词
                 segs = block.split(team_name)
                 if len(segs)>=2:
                     right_tail = segs[1].split(" ",1)[0]
@@ -203,15 +201,14 @@ def main():
         else:
             print(f"[WARN] 没找到 {team} 的ID，跳过懂球帝通道")
 
-        # 2) 兜底：直播吧
-        if len(team_rows) < 3:   # 太少，用兜底补
+        # 2) 兜底：直播吧（不够就补）
+        if len(team_rows) < 3:
             zb_rows = []
             for u in ZB_PAGES:
-                html = safe_get(u, label=f"zb8_{team}_{u.split('/')[-2] if u.endswith('/') else 'all'}")
+                html = safe_get(u, label=f"zb8_{team}_{u.split('/')[-2] if u.endswith('/') else u.split('/')[-1].split('.')[0]}")
                 if not html: continue
                 rows = parse_zhibo8(html, team)
                 zb_rows += rows
-            # 去重后合并
             for r in zb_rows:
                 add_unique(team_rows, r)
             print(f"[INFO] {team} 兜底累计 {len(team_rows)} 条")
@@ -228,6 +225,7 @@ def main():
         json.dump(y26, f, ensure_ascii=False, indent=2)
 
     print(f"[DONE] 2025={len(y25)} 条, 2026={len(y26)} 条；页面副本见 {DBG_DIR}/")
+
 if __name__ == "__main__":
     main()
     
