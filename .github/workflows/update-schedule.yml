@@ -44,14 +44,19 @@ jobs:
           touch .nojekyll
 
       # 用“手工 git”强制提交（避免 action 没抓到新文件的尴尬）
-      - name: Commit & push (force add)
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
+ - name: Commit & push (safe merge)
+  run: |
+    git config user.name "github-actions[bot]"
+    git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    git add -A
+    if git diff --cached --quiet; then
+      echo "No changes to commit."
+    else
+      git commit -m "chore: auto-update schedules & ics $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+      # 先拉远程再推，避免 non-fast-forward 错误
+      git pull --rebase origin main || true
+      git push origin main
+    fi
             git commit -m "chore: auto-update schedules & ics $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
             git push
           fi
