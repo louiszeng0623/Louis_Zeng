@@ -1,14 +1,11 @@
 name: Update Match Schedules
 
 on:
-  # 手动触发
   workflow_dispatch:
-  # 每天凌晨 4 点（北京时间）自动跑
-  # GitHub Actions 使用 UTC，这里 20:00 UTC = 北京时间次日 04:00
+  # 每天凌晨 4 点（北京时间）自动跑；GitHub 用 UTC，这里 20:00=次日 04:00(北京)
   schedule:
     - cron: '0 20 * * *'
 
-# 防并发：同一时间只跑一个，新的会排队
 concurrency:
   group: 'update-schedule'
   cancel-in-progress: false
@@ -17,7 +14,6 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
 
-    # 允许工作流向仓库推送（用 GITHUB_TOKEN）
     permissions:
       contents: write
 
@@ -25,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # 需要完整历史，避免 push/rebase 问题
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -38,18 +34,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
 
-      # 运行爬虫：抓 2025/2026 两年的 成都蓉城 & 国际米兰
       - name: Run scraper
         env:
           TZ: Asia/Shanghai
         run: |
           mkdir -p data/_debug
+          # 抓“成都蓉城 & 国际米兰”，年份 2025/2026，输出到 data/ 下
           python scripts/scrape_teams.py \
             --teams "成都蓉城" "国际米兰" \
             --years 2025 2026 \
             --out data
 
-      # 生成合并后的 ICS
       - name: Build merged ICS
         run: |
           mkdir -p data/ics
@@ -58,7 +53,6 @@ jobs:
             --out data/ics/matches_all.ics \
             --title "Louis_Zeng 合并赛程 (2025-2026)"
 
-      # 调试工件：无论成功失败都上传（方便你在 Actions 页面下载核对）
       - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -71,7 +65,6 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
-      # 提交并推送：先 rebase 再推，避免 non-fast-forward 错误
       - name: Commit & push (safe merge)
         run: |
           git config user.name  "github-actions[bot]"
@@ -84,7 +77,5 @@ jobs:
           fi
 
           git commit -m "chore: auto-update schedules & ics $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-
-          # 关键：先拉（rebase）再推，解决 “tip behind / non-fast-forward” 问题
           git pull --rebase origin main || true
           git push origin main
