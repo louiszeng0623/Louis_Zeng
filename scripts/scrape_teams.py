@@ -27,18 +27,51 @@ def write_text(path, text):
     with open(path, "w", encoding="utf-8") as f: f.write(text)
 
 def safe_get(url, retries=3, timeout=20, label=""):
+    """
+    稳健获取网页文本：
+    1) 先拿 bytes，再用正确编码解码（utf-8 优先）
+    2) 始终把“解码后的纯文本”写入 data/_debug/ 便于排查
+    """
     last = ""
+    headers = {
+        **UA,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
+        "Connection": "close",
+    }
     for i in range(retries):
         try:
-            r = requests.get(url, headers=UA, timeout=timeout)
-            if r.status_code == 200 and len(r.text) > 200:
+            r = requests.get(url, headers=headers, timeout=timeout)
+            raw = r.content or b""
+            txt = ""
+            # 1) 尝试 utf-8 解码
+            try:
+                txt = raw.decode("utf-8")
+            except UnicodeDecodeError:
+                # 2) 尝试 requests 猜测编码
+                enc = (r.apparent_encoding or "").lower()
+                if enc and enc not in ("utf-8", "utf8"):
+                    try:
+                        txt = raw.decode(enc, errors="ignore")
+                    except Exception:
+                        pass
+                # 3) 尝试 gbk
+                if not txt:
+                    try:
+                        txt = raw.decode("gbk", errors="ignore")
+                    except Exception:
+                        txt = r.text  # 实在不行 fallback
+
+            if r.status_code == 200 and len(txt) > 200:
                 if label:
-                    write_text(f"{DBG_DIR}/{label}.txt", r.text)
-                return r.text
-            last = f"bad status {r.status_code}"
+                    write_text(f"{DBG_DIR}/{label}.txt", txt)
+                return txt
+            last = f"bad status {r.status_code}, len={len(txt)}"
         except Exception as e:
             last = str(e)
-        time.sleep(2)
+        time.sleep(1.5)
     print(f"[WARN] get {url} failed: {last}")
     return ""
 
@@ -109,10 +142,8 @@ def parse_team_page(html, team_name):
         if DATE_YMD.search(ln) or DATE_MD.search(ln):
             block = clean(" ".join(lines[i:i+8]))
             if team_name not in block: continue
-            # 时间
             m_t = TIME_HM.search(block)
             hhmm = m_t.group(0) if m_t else "20:00"
-            # 对阵
             if " VS " in block: parts = block.split(" VS ")
             elif " vs " in block: parts = block.split(" vs ")
             else: parts = re.split(r"[－\-]", block, maxsplit=1)
@@ -157,7 +188,6 @@ def parse_zhibo8(html, team_name):
             hhmm = m_t.group(0) if m_t else "20:00"
             d = norm_date(block, "2025")
             if not d: continue
-            # 对阵
             opp = ""
             if " VS " in block:
                 a,b = block.split(" VS ",1)
@@ -189,7 +219,6 @@ def main():
     all_rows = []
 
     for team in TARGET_TEAMS:
-        # 1) 懂球帝
         tid = find_team_id(team)
         team_rows = []
         if tid:
@@ -201,7 +230,6 @@ def main():
         else:
             print(f"[WARN] 没找到 {team} 的ID，跳过懂球帝通道")
 
-        # 2) 兜底：直播吧（不够就补）
         if len(team_rows) < 3:
             zb_rows = []
             for u in ZB_PAGES:
@@ -215,7 +243,6 @@ def main():
 
         all_rows += team_rows
 
-    # 按年写出
     y25 = [r for r in all_rows if r["date"].startswith("2025-")]
     y26 = [r for r in all_rows if r["date"].startswith("2026-")]
 
