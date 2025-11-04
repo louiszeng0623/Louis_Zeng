@@ -1,62 +1,90 @@
 name: Update Match Schedules
 
 on:
-  workflow_dispatch: {}
+  # 手动触发
+  workflow_dispatch:
+  # 每天凌晨 4 点（北京时间）自动跑
+  # GitHub Actions 使用 UTC，这里 20:00 UTC = 北京时间次日 04:00
   schedule:
-    - cron: "0 20 * * *"   # UTC 20:00 => 北京时间次日 04:00
+    - cron: '0 20 * * *'
+
+# 防并发：同一时间只跑一个，新的会排队
+concurrency:
+  group: 'update-schedule'
+  cancel-in-progress: false
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+
+    # 允许工作流向仓库推送（用 GITHUB_TOKEN）
+    permissions:
+      contents: write
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0   # 需要完整历史，避免 push/rebase 问题
 
-      - name: Setup Python 3.11
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
+          cache: 'pip'
 
-      - name: Install deps
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # 如果你有 requirements.txt 就装，没有也无所谓
-          if [ -f scripts/requirements.txt ]; then pip install -r scripts/requirements.txt; fi
+          pip install -r scripts/requirements.txt
 
-      # 这里保持你的爬虫命令，能产出 data/schedule_2025.json & data/schedule_2026.json
+      # 运行爬虫：抓 2025/2026 两年的 成都蓉城 & 国际米兰
       - name: Run scraper
         env:
           TZ: Asia/Shanghai
         run: |
-          python scripts/scrape_teams.py
+          mkdir -p data/_debug
+          python scripts/scrape_teams.py \
+            --teams "成都蓉城" "国际米兰" \
+            --years 2025 2026 \
+            --out data
 
-      # 生成合并 ICS
+      # 生成合并后的 ICS
       - name: Build merged ICS
         run: |
           mkdir -p data/ics
           python scripts/make_ics.py \
-            --in data/schedule_2025.json data/schedule_2026.json \
+            --inputs data/schedule_2025.json data/schedule_2026.json \
             --out data/ics/matches_all.ics \
-            --name "Louis_Zeng 赛事合订(2025-2026)"
-          test -s data/ics/matches_all.ics || (echo "ICS not found or empty" && exit 1)
-          touch .nojekyll
+            --title "Louis_Zeng 合并赛程 (2025-2026)"
 
-      # 用“手工 git”强制提交（避免 action 没抓到新文件的尴尬）
- - name: Commit & push (safe merge)
-  run: |
-    git config user.name "github-actions[bot]"
-    git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-    git add -A
-    if git diff --cached --quiet; then
-      echo "No changes to commit."
-    else
-      git commit -m "chore: auto-update schedules & ics $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-      # 先拉远程再推，避免 non-fast-forward 错误
-      git pull --rebase origin main || true
-      git push origin main
-    fi
-            git commit -m "chore: auto-update schedules & ics $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-            git push
+      # 调试工件：无论成功失败都上传（方便你在 Actions 页面下载核对）
+      - name: Upload debug artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-snapshots
+          path: |
+            data/_debug/**
+            data/schedule_*.json
+            data/ics/*.ics
+          if-no-files-found: warn
+          retention-days: 7
+
+      # 提交并推送：先 rebase 再推，避免 non-fast-forward 错误
+      - name: Commit & push (safe merge)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
           fi
+
+          git commit -m "chore: auto-update schedules & ics $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+          # 关键：先拉（rebase）再推，解决 “tip behind / non-fast-forward” 问题
+          git pull --rebase origin main || true
+          git push origin main
