@@ -1,7 +1,7 @@
 name: Update Match Schedules
 
 on:
-  workflow_dispatch: {}          # 允许手动运行
+  workflow_dispatch: {}          # 手动运行
   schedule:
     # 每天 20:00 UTC 触发 ≈ 北京时间次日 04:00
     - cron: "0 20 * * *"
@@ -12,6 +12,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,19 +23,40 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        run: pip install -r scripts/requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
 
+      # 运行你的抓取脚本（会把原始页面副本写到 data/_debug/）
       - name: Run scraper
         run: python scripts/scrape_teams.py
 
+      # （可选）生成 ICS；即使失败也不影响后续步骤
+      - name: Build ICS files
+        run: python scripts/make_ics.py || true
+
+      # 仅当 data/ 下有差异时才提交
       - name: Commit & push if changed
         run: |
           if [[ -n $(git status --porcelain data/) ]]; then
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/*.json
-            git commit -m "chore: auto-update schedules $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git add data/*.json || true
+            git add data/ics/*.ics || true
+            git add data/_debug/* || true
+            git commit -m "chore: auto-update schedules & ics $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
             git push
           else
             echo "No changes."
           fi
+
+      # 把 data/_debug/ 目录里的原始页面文本打包成工件，方便你在 Actions 页面下载查看
+      - name: Upload debug artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-pages
+          path: |
+            data/_debug/**
+          if-no-files-found: ignore
+          
