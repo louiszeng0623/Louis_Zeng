@@ -1,7 +1,7 @@
 name: Update Match Schedules
 
 on:
-  workflow_dispatch: {}          # 手动运行
+  workflow_dispatch: {}          # 允许手动运行
   schedule:
     # 每天 20:00 UTC 触发 ≈ 北京时间次日 04:00
     - cron: "0 20 * * *"
@@ -27,15 +27,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
 
-      # 运行你的抓取脚本（会把原始页面副本写到 data/_debug/）
+      # 运行抓取脚本（会将原始页面副本写入 data/_debug/）
       - name: Run scraper
         run: python scripts/scrape_teams.py
 
-      # （可选）生成 ICS；即使失败也不影响后续步骤
+      # 生成 ICS（即使失败也不影响后续提交）
       - name: Build ICS files
         run: python scripts/make_ics.py || true
 
-      # 仅当 data/ 下有差异时才提交
+      # 仅当 data/ 下有变更才提交
       - name: Commit & push if changed
         run: |
           if [[ -n $(git status --porcelain data/) ]]; then
@@ -50,7 +50,7 @@ jobs:
             echo "No changes."
           fi
 
-      # 把 data/_debug/ 目录里的原始页面文本打包成工件，方便你在 Actions 页面下载查看
+      # 上传调试工件（方便下载查看 data/_debug/ 的原始页面）
       - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
