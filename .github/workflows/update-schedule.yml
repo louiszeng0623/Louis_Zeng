@@ -3,8 +3,7 @@ name: Update Match Schedules
 on:
   workflow_dispatch: {}
   schedule:
-    # 每天 UTC 20:00 触发 ≈ 北京时间次日 04:00
-    - cron: "0 20 * * *"
+    - cron: "0 20 * * *"   # UTC 20:00 => 北京时间次日 04:00
 
 jobs:
   scrape:
@@ -23,16 +22,17 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install -r scripts/requirements.txt
+          # 如果你有 requirements.txt 就装，没有也无所谓
+          if [ -f scripts/requirements.txt ]; then pip install -r scripts/requirements.txt; fi
 
-      # ★ 你的爬虫：保持你原来能产出 schedule_2025.json / schedule_2026.json 的命令
-      - name: Run scraper (produce schedule_2025.json & schedule_2026.json)
+      # 这里保持你的爬虫命令，能产出 data/schedule_2025.json & data/schedule_2026.json
+      - name: Run scraper
         env:
           TZ: Asia/Shanghai
         run: |
           python scripts/scrape_teams.py
 
-      # ★ 生成合并的 ICS
+      # 生成合并 ICS
       - name: Build merged ICS
         run: |
           mkdir -p data/ics
@@ -40,30 +40,18 @@ jobs:
             --in data/schedule_2025.json data/schedule_2026.json \
             --out data/ics/matches_all.ics \
             --name "Louis_Zeng 赛事合订(2025-2026)"
-
-      # ★ 确认 .ics 真的生成了
-      - name: Verify ICS exists
-        run: |
           test -s data/ics/matches_all.ics || (echo "ICS not found or empty" && exit 1)
-
-      # ★ 禁用 Jekyll，确保 .ics 会被 GitHub Pages 发布
-      - name: Add .nojekyll
-        run: |
           touch .nojekyll
 
-      # ★ 调试文件（可选）：把原始页面快照/解析结果放到 data/_debug（如果你脚本会产出）
-      - name: Ensure debug dir
+      # 用“手工 git”强制提交（避免 action 没抓到新文件的尴尬）
+      - name: Commit & push (force add)
         run: |
-          mkdir -p data/_debug
-
-      # ★ 提交改动
-      - name: Commit & push if changed
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: auto-update schedules & ics ${{ github.run_id }}"
-          file_pattern: |
-            data/schedule_*.json
-            data/_debug/**
-            data/ics/*.ics
-            .nojekyll
-            
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: auto-update schedules & ics $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git push
+          fi
