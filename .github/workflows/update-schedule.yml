@@ -1,0 +1,40 @@
+name: Update Match Schedules
+
+on:
+  workflow_dispatch: {}          # 允许手动运行
+  schedule:
+    # 每天 20:00 UTC 触发 ≈ 北京时间次日 04:00
+    - cron: "0 20 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run scraper
+        run: python scripts/scrape_teams.py
+
+      - name: Commit & push if changed
+        run: |
+          if [[ -n $(git status --porcelain data/) ]]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/*.json
+            git commit -m "chore: auto-update schedules $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git push
+          else
+            echo "No changes."
+          fi
