@@ -112,10 +112,442 @@
 <div class="vct-main record" id="record">
         <div class="vct-box">
         <div class="_header">
+            <span class="_title" title="2025-11-08">11月08日 星期六</span>
+        </div>
+        <div class="_content">
+            <ul>
+                                        <li label="" id="saishi1652124" data-time="2025-11-08 02:30">
+                            <time>02:30</time>
+                            <span class="_league">
+                                F1                            </span>
+                            <span class="_teams">
+                                    巴西站                                    <img src="https://duihui.duoduocdn.com/other/baxizhan.png">
+                                                                            <span> - </span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/chongcipaiweisai.png">
+                                    冲刺排位赛                            </span>
+                            <a href="/tiyu/2025/1108-match1652124v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1852817" data-time="2025-11-08 01:30">
+                            <time>01:30</time>
+                            <span class="_league">
+                                WTA年终总决赛                            </span>
+                            <span class="_teams">
+                                    萨巴伦卡                                    <img src="https://duihui.duoduocdn.com/other/671bd6c0bb2d84705912469d1b8a2be7.png">
+                                                                            <span>2 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/12f9a99c8fa9d6b85b54470b59146eef.png">
+                                    阿尼西莫娃                            </span>
+                            <a href="/tiyu/2025/1108-match1852817v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1784561" data-time="2025-11-08 01:30">
+                            <time>01:30</time>
+                            <span class="_league">
+                                沙特联                            </span>
+                            <span class="_teams">
+                                    纳杰马体育                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_AlNajmaSC_422267.png">
+                                                                            <span>2 - 4</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_liyadexinyue_793464.png">
+                                    利雅得新月                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1784561vplayer.htm" target="_blank">文字</a>                        </li>
+                            </ul>
+        </div>
+    </div>
+        <div class="vct-box">
+        <div class="_header">
             <span class="_title" title="2025-11-07">11月07日 星期五</span>
         </div>
         <div class="_content">
             <ul>
+                                        <li label="" id="saishi1852694" data-time="2025-11-07 23:40">
+                            <time>23:40</time>
+                            <span class="_league">
+                                连续5场比赛总得分排行                            </span>
+                            <span class="_teams">
+                                                                        <img src="https://duihui.duoduocdn.com/other/logo_f008643df834815d50c2ed6918596d88.png">
+                                                                            <span> - </span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/logo_f008643df834815d50c2ed6918596d88.png">
+                                                                </span>
+                            <a href="/zhibo/nba/2025/match1852694v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1852695" data-time="2025-11-07 23:10">
+                            <time>23:10</time>
+                            <span class="_league">
+                                足坛60后最佳阵容评分                            </span>
+                            <span class="_teams">
+                                                                        <img src="https://duihui.duoduocdn.com/other/logo_0891421dadbfd5b1c9741eb2f207c5ed.png">
+                                                                            <span> - </span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/logo_0891421dadbfd5b1c9741eb2f207c5ed.png">
+                                                                </span>
+                            <a href="/zhibo/zuqiu/2025/match1852695v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1852819" data-time="2025-11-07 23:00">
+                            <time>23:00</time>
+                            <span class="_league">
+                                ATP250雅典站男单                            </span>
+                            <span class="_teams">
+                                    德约科维奇                                    <img src="https://duihui.duoduocdn.com/other/9c3fe48043aa5f9ab1a1f88703c4d58c.png">
+                                                                            <span>2 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/eb15099aa0cfb2b79020fa6e66efd098.png">
+                                    汉夫曼                            </span>
+                            <a href="/tiyu/2025/1107-match1852819v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1852818" data-time="2025-11-07 23:00">
+                            <time>23:00</time>
+                            <span class="_league">
+                                WTA年终总决赛                            </span>
+                            <span class="_teams">
+                                    佩古拉                                    <img src="https://duihui.duoduocdn.com/other/e96b06a4770944e76699d96b9e0c8eda.png">
+                                                                            <span>1 - 2</span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/96004a62b2b6762d21874b85f7d838c9.png">
+                                    莱巴金娜                            </span>
+                            <a href="/tiyu/2025/1107-match1852818v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1847497" data-time="2025-11-07 22:35">
+                            <time>22:35</time>
+                            <span class="_league">
+                                篮球公园                            </span>
+                            <span class="_teams">
+                                                                        <img src="https://duihui.duoduocdn.com/nba/lanqiukedui1.png">
+                                                                            <span> - </span>
+                                                                        <img src="https://duihui.duoduocdn.com/nba/lanqiuzhudui1.png">
+                                                                </span>
+                            <a href="/zhibo/nba/2025/match1847497v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1652123" data-time="2025-11-07 22:30">
+                            <time>22:30</time>
+                            <span class="_league">
+                                F1                            </span>
+                            <span class="_teams">
+                                    练习赛                                    <img src="https://duihui.duoduocdn.com/other/lianxisai.png">
+                                                                            <span> - </span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/F111.png">
+                                    F1                            </span>
+                            <a href="/tiyu/2025/1107-match1652123v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1736565" data-time="2025-11-07 20:30">
+                            <time>20:30</time>
+                            <span class="_league">
+                                韩国羽毛球大师赛day4                            </span>
+                            <span class="_teams">
+                                                                        <img src="https://duihui.duoduocdn.com/other/qitayumaoqiuzhudui1.png">
+                                                                            <span> - </span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/qitayumaoqiukedui1.png">
+                                                                </span>
+                            <a href="/tiyu/2025/1107-match1736565v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1847494" data-time="2025-11-07 20:00">
+                            <time>20:00</time>
+                            <span class="_league">
+                                全运会比赛日                            </span>
+                            <span class="_teams">
+                                    全运会                                    <img src="https://duihui.duoduocdn.com/other/logoac544bfa_20251020.png">
+                                                                            <span> - </span>
+                                                                        <img src="http://duihui.duoduocdn.com/other/logo7bf23e73_20251107.png">
+                                    比赛日                            </span>
+                            <a href="/tiyu/2025/1107-match1847494v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1851379" data-time="2025-11-07 19:30">
+                            <time>19:30</time>
+                            <span class="_league">
+                                斯诺克国际锦标赛                            </span>
+                            <span class="_teams">
+                                    吴宜泽(4)                                    <img src="https://duihui.duoduocdn.com/other/012d81e69f0c665a629827766792e53a.png">
+                                                                            <span class="_score">
+                                            <span class="c-s">9 - 6</span>
+                                            <span class="s-m-l">阶段一4-4</span>
+                                        </span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/296643e95098742991ca16fd7bf78e21.png">
+                                    赵心童(4)                            </span>
+                            <a href="https://news.zhibo8.com/other/2025-11-07/match1851379vnative.htm" target="_blank">录像 战报 文字</a>                        </li>
+                                        <li label="" id="saishi1841685" data-time="2025-11-07 19:30">
+                            <time>19:30</time>
+                            <span class="_league">
+                                Blast Slam                            </span>
+                            <span class="_teams">
+                                    Aurora                                    <img src="https://duihui.duoduocdn.com/game/zq_Aurora_397796.png">
+                                                                            <span>0 - 2</span>
+                                                                        <img src="https://duihui.duoduocdn.com/game/zq_Heroic_845846.png">
+                                    Heroic                            </span>
+                            <a href="/game/2025/1107-match1841685v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1839902" data-time="2025-11-07 19:30">
+                            <time>19:30</time>
+                            <span class="_league">
+                                全运男篮                            </span>
+                            <span class="_teams">
+                                    四川全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_sichuanquanyunnanlan_343855.png">
+                                                                            <span>82 - 63</span>
+                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_shanghaiquanyunnanlan_421777.png">
+                                    上海全运男篮                            </span>
+                            <a href="/nba/2025/1107-match1839902v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1839901" data-time="2025-11-07 19:30">
+                            <time>19:30</time>
+                            <span class="_league">
+                                全运男篮                            </span>
+                            <span class="_teams">
+                                    湖北全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_hubeiquanyunnanlan_639187.png">
+                                                                            <span>82 - 105</span>
+                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_xianggangquanyunnanlan_515226.png">
+                                    香港全运男篮                            </span>
+                            <a href="/nba/2025/1107-match1839901v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
+                                        <li label="" id="saishi1851324" data-time="2025-11-07 16:00">
+                            <time>16:00</time>
+                            <span class="_league">
+                                全运男足U20                            </span>
+                            <span class="_teams">
+                                    中国澳门U20                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_zhongguoaomenU20_366034.png">
+                                                                            <span>0 - 3</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_zhejiangU20_966134.png">
+                                    浙江U20                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1851324v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1839899" data-time="2025-11-07 16:00">
+                            <time>16:00</time>
+                            <span class="_league">
+                                全运男篮                            </span>
+                            <span class="_teams">
+                                    辽宁全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_liaoningquanyunnanlan_199062.png">
+                                                                            <span>91 - 59</span>
+                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_tianjinquanyunnanlan_103736.png">
+                                    天津全运男篮                            </span>
+                            <a href="/nba/2025/1107-match1839899v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1839898" data-time="2025-11-07 16:00">
+                            <time>16:00</time>
+                            <span class="_league">
+                                全运男篮                            </span>
+                            <span class="_teams">
+                                    吉林全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_jilinquanyunnanlan_259769.png">
+                                                                            <span>83 - 126</span>
+                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_beijingquanyunnanlan_778423.png">
+                                    北京全运男篮                            </span>
+                            <a href="/nba/2025/1107-match1839898v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1839894" data-time="2025-11-07 16:00">
+                            <time>16:00</time>
+                            <span class="_league">
+                                全运女篮                            </span>
+                            <span class="_teams">
+                                    浙江全运女篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_zhejiangquanyunnvlan_998574.png">
+                                                                            <span>71 - 90</span>
+                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_shandongquanyunnvlan_413775.png">
+                                    山东全运女篮                            </span>
+                            <a href="/nba/2025/1107-match1839894v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
+                                        <li label="" id="saishi1841684" data-time="2025-11-07 15:00">
+                            <time>15:00</time>
+                            <span class="_league">
+                                Blast Slam                            </span>
+                            <span class="_teams">
+                                    MOUZ                                    <img src="https://duihui.duoduocdn.com/game/zq_mouz_470647.png">
+                                                                            <span>2 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/game/zq_Spirit_331368.png">
+                                    TSpirit                            </span>
+                            <a href="/game/2025/1107-match1841684v-jijin.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1851377" data-time="2025-11-07 14:00">
+                            <time>14:00</time>
+                            <span class="_league">
+                                斯诺克国际锦标赛                            </span>
+                            <span class="_teams">
+                                    吴宜泽                                    <img src="https://duihui.duoduocdn.com/other/012d81e69f0c665a629827766792e53a.png">
+                                                                            <span>4 - 4</span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/296643e95098742991ca16fd7bf78e21.png">
+                                    赵心童                            </span>
+                            <a href="https://news.zhibo8.com/other/2025-11-07/match1851377vnative.htm" target="_blank">录像 战报 文字</a>                        </li>
+                                        <li label="" id="saishi1793860" data-time="2025-11-07 10:00">
+                            <time>10:00</time>
+                            <span class="_league">
+                                NBA                            </span>
+                            <span class="_teams">
+                                    快船                                    <img src="https://duihui.duoduocdn.com/nba/lq_luoshanjikuaichuan_285572.png">
+                                                                            <span>102 - 115</span>
+                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_feinikesitaiyang_554946.png">
+                                    太阳                            </span>
+                            <a href="https://news.zhibo8.com/nba/2025-11-07/match1793860date2025vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
+                                        <li label="" id="saishi1846253" data-time="2025-11-07 09:15">
+                            <time>09:15</time>
+                            <span class="_league">
+                                NFL常规赛                            </span>
+                            <span class="_teams">
+                                    突袭者                                    <img src="https://duihui.duoduocdn.com/other/logo221869df_20221006.png">
+                                                                            <span>7 - 10</span>
+                                                                        <img src="https://duihui.duoduocdn.com/other/yema.png">
+                                    野马                            </span>
+                            <a href="/tiyu/2025/1107-match1846253v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1647016" data-time="2025-11-07 08:30">
+                            <time>08:30</time>
+                            <span class="_league">
+                                巴甲                            </span>
+                            <span class="_teams">
+                                    帕尔梅拉斯                                    <img src="https://duihui.duoduocdn.com/zuqiu/d2ab19fcea0d6c0faba1af32b4b01e68.png">
+                                                                            <span>2 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/bed28a2190e8ab54dfe72dafb457c40d.png">
+                                    桑托斯                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1647016vplayer.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1804605" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    水晶宫                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_shuijinggong_555575.png">
+                                                                            <span>3 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_aerkemaer_666266.png">
+                                    阿尔克马尔                            </span>
+                            <a href="/zuqiu/2025/1107-match1804605v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1804604" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    赫根                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_hegen_058307.png">
+                                                                            <span>1 - 2</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_sitelasibao_491127.png">
+                                    斯特拉斯堡                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1804604v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1804603" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    巴列卡诺                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_baliekanuo_922046.png">
+                                                                            <span>3 - 2</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/da874a267235c9101993c678bef2ddb4.png">
+                                    波兹南莱赫                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1804603v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1800727" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    塞萨洛尼基                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_saisaluoniji_234052.png">
+                                                                            <span>4 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_nianqingren_395361.png">
+                                    年轻人                            </span>
+                            <a href="/zuqiu/2025/1107-match1800727v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1800714" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    格拉斯哥流浪者                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_gelasigeliulangzhe_218185.png">
+                                                                            <span>0 - 2</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_luoma_450609.png">
+                                    罗马                            </span>
+                            <a href="https://news.zhibo8.com/zuqiu/2025-11-07/match1800714date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
+                                        <li label="" id="saishi1800702" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    布拉加                                    <img src="https://duihui.duoduocdn.com/zuqiu/66d99c85cd00d45123c6c8e3d45d95c1.png">
+                                                                            <span>3 - 4</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/1a22b098d4994c061028322aed58e0ab.png">
+                                    亨克                            </span>
+                            <a href="/zuqiu/2025/1107-match1800702v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1800698" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    皇家贝蒂斯                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_huangjiabeidisi_877958.png">
+                                                                            <span>2 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_liang_978377.png">
+                                    里昂                            </span>
+                            <a href="https://news.zhibo8.com/zuqiu/2025-11-07/match1800698date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
+                                        <li label="" id="saishi1800695" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    博洛尼亚                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_boluoniya_843608.png">
+                                                                            <span>0 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/1c9853962db31076d9db469239f812f9.png">
+                                    布兰                            </span>
+                            <a href="/zuqiu/2025/1107-match1800695v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1800692" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    斯图加特                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_situjiate_283351.png">
+                                                                            <span>2 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_feiyenuode_323422.png">
+                                    费耶诺德                            </span>
+                            <a href="/zuqiu/2025/1107-match1800692v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1800633" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    费伦茨瓦罗斯                                    <img src="https://duihui.duoduocdn.com/zuqiu/5a5eada9cdbbea227ff8c9130f0120f8.png">
+                                                                            <span>3 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_luduogeleici_194771.png">
+                                    卢多戈雷茨                            </span>
+                            <a href="/zuqiu/2025/1107-match1800633v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1800620" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    比尔森胜利                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_biersenshengli_330997.png">
+                                                                            <span>0 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_feineibaqie_510762.png">
+                                    费内巴切                            </span>
+                            <a href="/zuqiu/2025/1107-match1800620v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1800605" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧联杯                            </span>
+                            <span class="_teams">
+                                    阿斯顿维拉                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_asidunweila_323305.png">
+                                                                            <span>2 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_telaweifumakabi_222047.png">
+                                    特拉维夫马卡比                            </span>
+                            <a href="/zuqiu/2025/1107-match1800605v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
+                                        <li label="" id="saishi1800561" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    林肯红魔                                    <img src="https://duihui.duoduocdn.com/zuqiu/f1cb1f66296921d9713ce68642f4eba2.png">
+                                                                            <span>1 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/c9ab48d246176af1a2189da927e0cf44.png">
+                                    里耶卡                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1800561v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1800556" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    维也纳快速                                    <img src="https://duihui.duoduocdn.com/zuqiu/890b609ab17502655e602c67f2bfce68.png">
+                                                                            <span>0 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_kelayuewadaxue_802638.png">
+                                    克拉约瓦大学                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1800556v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1800536" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    斯肯迪亚                                    <img src="https://duihui.duoduocdn.com/zuqiu/ee304b37a2b67a2c16221da4bf4d0605.png">
+                                                                            <span>1 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_qiaozhiluoniya_792507.png">
+                                    乔治罗尼亚                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1800536v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1800520" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    谢尔伯恩                                    <img src="https://duihui.duoduocdn.com/zuqiu/f444284aca2992be47a748d6b11cd1d3.png">
+                                                                            <span>0 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/5140eb21a4bdd95729adce2a2bbe243b.png">
+                                    德利塔                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1800520v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1800506" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    洛桑                                    <img src="https://duihui.duoduocdn.com/zuqiu/890c6b3c0a8f74d9757c3bf58c2c289f.png">
+                                                                            <span>1 - 1</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_aomoniya_184203.png">
+                                    奥莫尼亚                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1800506v.htm" target="_blank">文字</a>                        </li>
+                                        <li label="" id="saishi1800502" data-time="2025-11-07 04:00">
+                            <time>04:00</time>
+                            <span class="_league">
+                                欧协联                            </span>
+                            <span class="_teams">
+                                    基辅迪纳摩                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_jifudinamo_330846.png">
+                                                                            <span>6 - 0</span>
+                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_zilinnisiji_273751.png">
+                                    兹林尼斯基                            </span>
+                            <a href="/zhibo/zuqiu/2025/match1800502v.htm" target="_blank">文字</a>                        </li>
                                         <li label="" id="saishi1804602" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -125,7 +557,7 @@
                                                                             <span>2 - 1</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/zq_foluolunsa_105355.png">
                                     佛罗伦萨                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1804602v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1804602v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800722" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -135,7 +567,7 @@
                                                                             <span>3 - 1</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/zq_bujialeisitexing_761905.png">
                                     布加勒斯特星                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800722v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800722v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800707" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -145,7 +577,7 @@
                                                                             <span>2 - 0</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/11668702bcec04eb9580a10734e05e32.png">
                                     前进之鹰                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800707v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800707v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800686" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -155,7 +587,7 @@
                                                                             <span>1 - 1</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/zq_boertu_569603.png">
                                     波尔图                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800686v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800686v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800669" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -165,7 +597,7 @@
                                                                             <span>0 - 0</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/zq_nuodinghansenlin_239883.png">
                                     诺丁汉森林                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800669v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800669v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800660" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -175,7 +607,7 @@
                                                                             <span>0 - 1</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/1e9dcb338fd706aa00bc6427b9edee31.png">
                                     帕纳辛纳科斯                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800660v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800660v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800656" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -185,7 +617,7 @@
                                                                             <span>3 - 1</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/zq_kaierteren_983769.png">
                                     凯尔特人                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800656v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800656v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800655" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -195,7 +627,7 @@
                                                                             <span>0 - 3</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/zq_weigesaierta_467768.png">
                                     塞尔塔                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800655v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800655v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800644" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -205,7 +637,7 @@
                                                                             <span>1 - 0</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/zq_lier_766954.png">
                                     里尔                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800644v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800644v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800636" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -215,7 +647,7 @@
                                                                             <span>1 - 3</span>
                                                                         <img src="https://duihui.duoduocdn.com/zuqiu/zq_fulaibao_956907.png">
                                     弗赖堡                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1800636v.htm" target="_blank">文字</a>                        </li>
+                            <a href="/zuqiu/2025/1107-match1800636v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
                                         <li label="" id="saishi1800551" data-time="2025-11-07 01:45">
                             <time>01:45</time>
                             <span class="_league">
@@ -305,7 +737,7 @@
                                                                             <span>2 - 0</span>
                                                                         <img src="https://duihui.duoduocdn.com/other/940fe5903d6c9d8855ed2787451a90d9.png">
                                     博尔热斯                            </span>
-                            <a href="/tiyu/2025/1107-match1850972v-jijin.htm" target="_blank">文字</a>                        </li>
+                            <a href="/tiyu/2025/1107-match1850972v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
                             </ul>
         </div>
     </div>
@@ -324,7 +756,7 @@
                                                                             <span>2 - 0</span>
                                                                         <img src="https://duihui.duoduocdn.com/other/ef7c1304d8b6bfe66d6173a32fa0e01a.png">
                                     高芙                            </span>
-                            <a href="/tiyu/2025/1106-match1850683v-jijin.htm" target="_blank">文字</a>                        </li>
+                            <a href="/tiyu/2025/1107-match1850683v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
                                         <li label="" id="saishi1851383" data-time="2025-11-06 23:00">
                             <time>23:00</time>
                             <span class="_league">
@@ -374,7 +806,7 @@
                                                                             <span>2 - 0</span>
                                                                         <img src="https://duihui.duoduocdn.com/other/21488fbf369ae7ab4bc9a03dbb6f18e8.png">
                                     保利尼                            </span>
-                            <a href="/tiyu/2025/1106-match1850681v-jijin.htm" target="_blank">文字</a>                        </li>
+                            <a href="/tiyu/2025/1107-match1850681v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
                                         <li label="" id="saishi1785729" data-time="2025-11-06 20:15">
                             <time>20:15</time>
                             <span class="_league">
@@ -1027,535 +1459,6 @@
                                                                         <img src="https://duihui.duoduocdn.com/nba/lq_duolunduomenglong_791268.png">
                                     猛龙                            </span>
                             <a href="https://news.zhibo8.com/nba/2025-11-05/match1793843date2025vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1800151" data-time="2025-11-05 04:00">
-                            <time>04:00</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    热刺                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_tuotenamureci_396028.png">
-                                                                            <span>4 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_gebenhagen_893286.png">
-                                    哥本哈根                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800151date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1800123" data-time="2025-11-05 04:00">
-                            <time>04:00</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    巴黎圣日耳曼                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_balishengrierman_865365.png">
-                                                                            <span>1 - 2</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_bairenmunihei_761216.png">
-                                    拜仁慕尼黑                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800123date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1800117" data-time="2025-11-05 04:00">
-                            <time>04:00</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    奥林匹亚科斯                                    <img src="https://duihui.duoduocdn.com/zuqiu/93bf99da1d6c8037023393377bdbe1d7.png">
-                                                                            <span>1 - 1</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_PSVaiyinhuowen_733695.png">
-                                    埃因霍温                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800117date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1800093" data-time="2025-11-05 04:00">
-                            <time>04:00</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    利物浦                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_liwupu_157836.png">
-                                                                            <span>1 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_huangjiamadeli_641365.png">
-                                    皇家马德里                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800093date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1800085" data-time="2025-11-05 04:00">
-                            <time>04:00</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    尤文图斯                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_youwentusi_170832.png">
-                                                                            <span>1 - 1</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_putaoyatiyu_902893.png">
-                                    葡萄牙体育                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800085date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1800052" data-time="2025-11-05 04:00">
-                            <time>04:00</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    博德闪耀                                    <img src="https://duihui.duoduocdn.com/zuqiu/bedfd60f5c373bcf0bee4c56447f2a5f.png">
-                                                                            <span>0 - 1</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_monage_782657.png">
-                                    摩纳哥                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800052date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1800032" data-time="2025-11-05 04:00">
-                            <time>04:00</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    马德里竞技                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_madelijingji_163773.png">
-                                                                            <span>3 - 1</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_shengjiluosi_216079.png">
-                                    圣吉罗斯                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800032date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1785794" data-time="2025-11-05 02:15">
-                            <time>02:15</time>
-                            <span class="_league">
-                                亚冠精英联赛                            </span>
-                            <span class="_teams">
-                                    吉达联合                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_jidalianhe_448772.png">
-                                                                            <span>3 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_shajia_350153.png">
-                                    沙迦                            </span>
-                            <a href="/zuqiu/2025/1105-match1785794v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1800142" data-time="2025-11-05 01:45">
-                            <time>01:45</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    布拉格斯拉维亚                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_bulagesilaweiya_193437.png">
-                                                                            <span>0 - 3</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_asenna_038936.png">
-                                    阿森纳                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800142date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1800107" data-time="2025-11-05 01:45">
-                            <time>01:45</time>
-                            <span class="_league">
-                                欧冠                            </span>
-                            <span class="_teams">
-                                    那不勒斯                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_nabulesi_358137.png">
-                                                                            <span>0 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_falankefu_011753.png">
-                                    法兰克福                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-05/match1800107date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1847625" data-time="2025-11-05 01:00">
-                            <time>01:00</time>
-                            <span class="_league">
-                                ATP250雅典站                            </span>
-                            <span class="_teams">
-                                    德约科维奇                                    <img src="https://duihui.duoduocdn.com/other/9c3fe48043aa5f9ab1a1f88703c4d58c.png">
-                                                                            <span>2 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/8903b6d12c78368c105f5884664e9848.png">
-                                    塔比洛                            </span>
-                            <a href="https://news.zhibo8.com/other/2025-11-05/match1847625vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1850563" data-time="2025-11-05 00:00">
-                            <time>00:00</time>
-                            <span class="_league">
-                                WTA年终总决赛                            </span>
-                            <span class="_teams">
-                                    萨巴伦卡                                    <img src="https://duihui.duoduocdn.com/other/671bd6c0bb2d84705912469d1b8a2be7.png">
-                                                                            <span>2 - 1</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/e96b06a4770944e76699d96b9e0c8eda.png">
-                                    佩古拉                            </span>
-                            <a href="/tiyu/2025/1105-match1850563v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
-                                        <li label="" id="saishi1785749" data-time="2025-11-05 00:00">
-                            <time>00:00</time>
-                            <span class="_league">
-                                亚冠精英联赛                            </span>
-                            <span class="_teams">
-                                    萨德                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_duohasade_344863.png">
-                                                                            <span>1 - 2</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_jidaguomin_751632.png">
-                                    吉达国民                            </span>
-                            <a href="/zuqiu/2025/1105-match1785749v-luxiang.htm" target="_blank">录像 文字</a>                        </li>
-                                        <li label="" id="saishi1736562" data-time="2025-11-05 00:00">
-                            <time>00:00</time>
-                            <span class="_league">
-                                韩国羽毛球大师赛day1                            </span>
-                            <span class="_teams">
-                                                                        <img src="https://duihui.duoduocdn.com/other/qitayumaoqiuzhudui1.png">
-                                                                            <span> - </span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/qitayumaoqiukedui1.png">
-                                                                </span>
-                            <a href="/tiyu/2025/1105-match1736562v-jijin.htm" target="_blank">文字</a>                        </li>
-                            </ul>
-        </div>
-    </div>
-        <div class="vct-box">
-        <div class="_header">
-            <span class="_title" title="2025-11-04">11月04日 星期二</span>
-        </div>
-        <div class="_content">
-            <ul>
-                                        <li label="" id="saishi1850733" data-time="2025-11-04 23:55">
-                            <time>23:55</time>
-                            <span class="_league">
-                                11月4日热门球员表现                            </span>
-                            <span class="_teams">
-                                                                        <img src="https://duihui.duoduocdn.com/other/logo_75be4d32c16871dad6f446028f5ea1dc.png">
-                                                                            <span> - </span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/logo_75be4d32c16871dad6f446028f5ea1dc.png">
-                                                                </span>
-                            <a href="/zhibo/nba/2025/match1850733v.htm" target="_blank">文字</a>                        </li>
-                                        <li label="" id="saishi1850558" data-time="2025-11-04 23:55">
-                            <time>23:55</time>
-                            <span class="_league">
-                                五大联赛球员年薪排名                            </span>
-                            <span class="_teams">
-                                                                        <img src="https://duihui.duoduocdn.com/other/logo_95de2cadaa0883ff153eabf9ef5b3fda.png">
-                                                                            <span> - </span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/logo_95de2cadaa0883ff153eabf9ef5b3fda.png">
-                                                                </span>
-                            <a href="/zhibo/zuqiu/2025/match1850558v.htm" target="_blank">文字</a>                        </li>
-                                        <li label="" id="saishi1850831" data-time="2025-11-04 22:05">
-                            <time>22:05</time>
-                            <span class="_league">
-                                摩根再度专访C罗第1集                            </span>
-                            <span class="_teams">
-                                    摩根                                    <img src="http://duihui.duoduocdn.com/zuqiu/logo0719361d_20251104.png">
-                                                                            <span>0 - 0</span>
-                                                                        <img src="http://duihui.duoduocdn.com/zuqiu/logo92992734_20251104.png">
-                                    C罗                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1850831vplayer.htm" target="_blank">文字</a>                        </li>
-                                        <li label="" id="saishi1850562" data-time="2025-11-04 22:00">
-                            <time>22:00</time>
-                            <span class="_league">
-                                WTA年终总决赛                            </span>
-                            <span class="_teams">
-                                    高芙                                    <img src="https://duihui.duoduocdn.com/other/ef7c1304d8b6bfe66d6173a32fa0e01a.png">
-                                                                            <span>2 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/21488fbf369ae7ab4bc9a03dbb6f18e8.png">
-                                    保利尼                            </span>
-                            <a href="/tiyu/2025/1105-match1850562v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
-                                        <li label="" id="saishi1785814" data-time="2025-11-04 20:15">
-                            <time>20:15</time>
-                            <span class="_league">
-                                亚冠精英联赛                            </span>
-                            <span class="_teams">
-                                    武里南联                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_wulinanlian_041073.png">
-                                                                            <span>2 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_shanghaihaigangzuqiujulebu_145737.png">
-                                    上海海港                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-04/match1785814date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1821700" data-time="2025-11-04 19:45">
-                            <time>19:45</time>
-                            <span class="_league">
-                                全运女足                            </span>
-                            <span class="_teams">
-                                    山东全运女足                                    <img src="https://duihui.duoduocdn.com/zuqiu/ad60e5fcef74b2bd461a2907ec0ca6ce.png">
-                                                                            <span>3 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/a671baef59c6f59c59102223a8d53015.png">
-                                    重庆全运女足                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1821700v.htm" target="_blank">文字</a>                        </li>
-                                        <li label="" id="saishi1850522" data-time="2025-11-04 19:30">
-                            <time>19:30</time>
-                            <span class="_league">
-                                斯诺克国际锦标赛                            </span>
-                            <span class="_teams">
-                                    特鲁姆普                                    <img src="https://duihui.duoduocdn.com/other/f3987caae2415101f1d6eb8ea203df23.png">
-                                                                            <span>6 - 3</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/e5c465719fb621976cb2f1a8395d6742.png">
-                                    森卡姆                            </span>
-                            <a href="/tiyu/2025/1104-match1850522v-jijin.htm" target="_blank">录像 文字</a>                        </li>
-                                        <li label="" id="saishi1850518" data-time="2025-11-04 19:30">
-                            <time>19:30</time>
-                            <span class="_league">
-                                斯诺克国际锦标赛                            </span>
-                            <span class="_teams">
-                                    丁俊晖                                    <img src="https://duihui.duoduocdn.com/other/d2e0c4d9ec52d6eba7915a4c3b498824.png">
-                                                                            <span>6 - 4</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/4d31f528359b84492ac7ceb75c5e60e6.png">
-                                    海菲尔德                            </span>
-                            <a href="/tiyu/2025/1104-match1850518v-jijin.htm" target="_blank">录像 文字</a>                        </li>
-                                        <li label="" id="saishi1847125" data-time="2025-11-04 19:30">
-                            <time>19:30</time>
-                            <span class="_league">
-                                斯诺克国锦赛                            </span>
-                            <span class="_teams">
-                                                                        <img src="https://duihui.duoduocdn.com/other/qitasinuokezhudui1.png">
-                                                                            <span> - </span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/qitasinuokekedui.png">
-                                                                </span>
-                            <a href="/tiyu/2025/1104-match1847125v-jijin.htm" target="_blank">文字</a>                        </li>
-                                        <li label="" id="saishi1839885" data-time="2025-11-04 19:30">
-                            <time>19:30</time>
-                            <span class="_league">
-                                全运男篮                            </span>
-                            <span class="_teams">
-                                    江苏全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_jiangsuquanyunnanlan_932501.png">
-                                                                            <span>59 - 82</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_zhejiangquanyunnanlan_473193.png">
-                                    浙江全运男篮                            </span>
-                            <a href="/nba/2025/1104-match1839885v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1839884" data-time="2025-11-04 19:30">
-                            <time>19:30</time>
-                            <span class="_league">
-                                全运男篮                            </span>
-                            <span class="_teams">
-                                    广东全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_guangdongquanyunnanlan_098965.png">
-                                                                            <span>87 - 71</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_shandongquanyunnanlan_907293.png">
-                                    山东全运男篮                            </span>
-                            <a href="/nba/2025/1104-match1839884v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1785844" data-time="2025-11-04 18:00">
-                            <time>18:00</time>
-                            <span class="_league">
-                                亚冠精英联赛                            </span>
-                            <span class="_teams">
-                                    町田泽维亚                                    <img src="https://duihui.duoduocdn.com/zuqiu/f3af5208f3b0f4adc4c2ee832a1fabf0.png">
-                                                                            <span>1 - 2</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/e4215fcdb20fda111264db31af6fcd5c.png">
-                                    墨尔本城                            </span>
-                            <a href="/zuqiu/2025/1104-match1785844v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1785837" data-time="2025-11-04 18:00">
-                            <time>18:00</time>
-                            <span class="_league">
-                                亚冠精英联赛                            </span>
-                            <span class="_teams">
-                                    广岛三箭                                    <img src="https://duihui.duoduocdn.com/zuqiu/43a0bdb277e4fb07a3dfe17d604e6b99.png">
-                                                                            <span>1 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_jiangyuanFC_837025.png">
-                                    江原FC                            </span>
-                            <a href="/zuqiu/2025/1105-match1785837v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1785833" data-time="2025-11-04 18:00">
-                            <time>18:00</time>
-                            <span class="_league">
-                                亚冠精英联赛                            </span>
-                            <span class="_teams">
-                                    首尔FC                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_shouerFC_096747.png">
-                                                                            <span>0 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_chengdurongchengzuqiujulebu_142633.png">
-                                    成都蓉城                            </span>
-                            <a href="https://news.zhibo8.com/zuqiu/2025-11-04/match1785833date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1850731" data-time="2025-11-04 17:30">
-                            <time>17:30</time>
-                            <span class="_league">
-                                CS2                            </span>
-                            <span class="_teams">
-                                    Spirit                                    <img src="https://duihui.duoduocdn.com/game/Spirit.png">
-                                                                            <span>0 - 2</span>
-                                                                        <img src="https://duihui.duoduocdn.com/game/Falcons.png">
-                                    Falcons                            </span>
-                            <a href="https://news.zhibo8.com/game/2025-11-04/match1850731vnative.htm" target="_blank">战报 文字</a>                        </li>
-                                        <li label="" id="saishi1850544" data-time="2025-11-04 17:30">
-                            <time>17:30</time>
-                            <span class="_league">
-                                CS2                            </span>
-                            <span class="_teams">
-                                    TYLOO                                    <img src="https://duihui.duoduocdn.com/game/TYLOO.png">
-                                                                            <span>0 - 2</span>
-                                                                        <img src="https://duihui.duoduocdn.com/game/PAIN.png">
-                                    paiN                            </span>
-                            <a href="https://news.zhibo8.com/game/2025-11-04/match1850544vnative.htm" target="_blank">战报 文字</a>                        </li>
-                                        <li label="" id="saishi1839882" data-time="2025-11-04 16:00">
-                            <time>16:00</time>
-                            <span class="_league">
-                                全运男篮                            </span>
-                            <span class="_teams">
-                                    湖北全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_hubeiquanyunnanlan_639187.png">
-                                                                            <span>61 - 124</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_sichuanquanyunnanlan_343855.png">
-                                    四川全运男篮                            </span>
-                            <a href="/nba/2025/1104-match1839882v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1839880" data-time="2025-11-04 16:00">
-                            <time>16:00</time>
-                            <span class="_league">
-                                全运男篮                            </span>
-                            <span class="_teams">
-                                    河南全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_henanquanyunnanlan_408695.png">
-                                                                            <span>77 - 84</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_shanghaiquanyunnanlan_421777.png">
-                                    上海全运男篮                            </span>
-                            <a href="/nba/2025/1104-match1839880v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1821697" data-time="2025-11-04 16:00">
-                            <time>16:00</time>
-                            <span class="_league">
-                                全运女足                            </span>
-                            <span class="_teams">
-                                    广东女足                                    <img src="https://duihui.duoduocdn.com/zuqiu/zq_guangdongnvzu_462372.png">
-                                                                            <span>5 - 0</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/d8882a98d353f47752b35bf6f52bec71.png">
-                                    内蒙古全运女足                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1821697v.htm" target="_blank">文字</a>                        </li>
-                                        <li label="" id="saishi1850554" data-time="2025-11-04 14:30">
-                            <time>14:30</time>
-                            <span class="_league">
-                                斯诺克国际锦标赛                            </span>
-                            <span class="_teams">
-                                    利索夫斯基                                    <img src="https://duihui.duoduocdn.com/other/833c6c52273822b5ebe3dd08bbc768ed.png">
-                                                                            <span>6 - 5</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/1ce4befa46a9586fe5a348dbd150375e.png">
-                                    奥沙利文                            </span>
-                            <a href="/tiyu/2025/1104-match1850554v-jijin.htm" target="_blank">录像 文字</a>                        </li>
-                                        <li label="" id="saishi1850553" data-time="2025-11-04 14:30">
-                            <time>14:30</time>
-                            <span class="_league">
-                                斯诺克国际锦标赛                            </span>
-                            <span class="_teams">
-                                    雷佩凡                                    <img src="https://duihui.duoduocdn.com/other/9f0a12bfa38a150276dd219c82b144c8.png">
-                                                                            <span>5 - 6</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/296643e95098742991ca16fd7bf78e21.png">
-                                    赵心童                            </span>
-                            <a href="/tiyu/2025/1104-match1850553v-jijin.htm" target="_blank">录像 文字</a>                        </li>
-                                        <li label="" id="saishi1849066" data-time="2025-11-04 14:30">
-                            <time>14:30</time>
-                            <span class="_league">
-                                斯诺克国际锦标赛                            </span>
-                            <span class="_teams">
-                                    加里-威尔逊                                    <img src="https://duihui.duoduocdn.com/other/c8b4736b9acce95b9102f83e5f0024cf.png">
-                                                                            <span>0 - 6</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/b687750b5f85f5adcb631e2060a3dd27.png">
-                                    斯佳辉                            </span>
-                            <a href="https://news.zhibo8.com/other/2025-11-04/match1849066vnative.htm" target="_blank">录像 战报 文字</a>                        </li>
-                <li label="" id="saishi0" data-time="2025-11-04 14:30"><time>14:30</time><span class="_league">斯诺克国际锦标赛第3轮</span><span class="_teams"><img src="http://tu.duoduocdn.com/uploads/day_251102/sc_690768805ba41.png"></span> <a href="https://news.zhibo8.com/other/2024-04-28/662dc5ad1cb63native.htm" target="_blank">展开</a></li>                        <li label="" id="saishi1850559" data-time="2025-11-04 14:00">
-                            <time>14:00</time>
-                            <span class="_league">
-                                现役单年多次压哨绝杀球员                            </span>
-                            <span class="_teams">
-                                                                        <img src="https://duihui.duoduocdn.com/other/logo_f8810cbca5cea9812fe05fadb0982071.png">
-                                                                            <span> - </span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/logo_f8810cbca5cea9812fe05fadb0982071.png">
-                                                                </span>
-                            <a href="/zhibo/nba/2025/match1850559v.htm" target="_blank">文字</a>                        </li>
-                                        <li label="" id="saishi1839879" data-time="2025-11-04 13:30">
-                            <time>13:30</time>
-                            <span class="_league">
-                                全运男篮                            </span>
-                            <span class="_teams">
-                                    吉林全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_jilinquanyunnanlan_259769.png">
-                                                                            <span>68 - 118</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_liaoningquanyunnanlan_199062.png">
-                                    辽宁全运男篮                            </span>
-                            <a href="/nba/2025/1104-match1839879v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1839878" data-time="2025-11-04 13:30">
-                            <time>13:30</time>
-                            <span class="_league">
-                                全运男篮                            </span>
-                            <span class="_teams">
-                                    澳门全运男篮                                    <img src="https://duihui.duoduocdn.com/nba/lq_aomenquanyunnanlan_885687.png">
-                                                                            <span>63 - 109</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_tianjinquanyunnanlan_103736.png">
-                                    天津全运男篮                            </span>
-                            <a href="/nba/2025/1104-match1839878v-jijin.htm" target="_blank">集锦 录像 文字</a>                        </li>
-                                        <li label="" id="saishi1842062" data-time="2025-11-04 11:50">
-                            <time>11:50</time>
-                            <span class="_league">
-                                美职联                            </span>
-                            <span class="_teams">
-                                    西雅图海湾人                                    <img src="https://duihui.duoduocdn.com/zuqiu/ed691ccb9420d607c9c69729ec12f642.png">
-                                                                            <span>4 - 2</span>
-                                                                        <img src="https://duihui.duoduocdn.com/zuqiu/zq_mingnisudalian_228228.png">
-                                    明尼苏达联                            </span>
-                            <a href="/zhibo/zuqiu/2025/match1842062v.htm" target="_blank">文字</a>                        </li>
-                                        <li label="" id="saishi1793842" data-time="2025-11-04 11:30">
-                            <time>11:30</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    热火                                    <img src="https://duihui.duoduocdn.com/nba/lq_maiamirehuo_201017.png">
-                                                                            <span>120 - 119</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_luoshanjikuaichuan_285572.png">
-                                    快船                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793842date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1845640" data-time="2025-11-04 11:00">
-                            <time>11:00</time>
-                            <span class="_league">
-                                NCAA                            </span>
-                            <span class="_teams">
-                                    加州大学圣克鲁兹分校                                    <img src="https://duihui.duoduocdn.com/nba/lq_jiazhoudaxueshengkeluzifenxiao_640363.png">
-                                                                            <span>53 - 98</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/6c4be45663028bbbc93ed3f96f621a71.png">
-                                    旧金山大学                            </span>
-                            <a href="/nba/2025/1104-match1845640v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
-                                        <li label="" id="saishi1793841" data-time="2025-11-04 11:00">
-                            <time>11:00</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    湖人                                    <img src="https://duihui.duoduocdn.com/nba/lq_luoshanjihuren_144698.png">
-                                                                            <span>123 - 115</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_botelankaituozhe_407113.png">
-                                    开拓者                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793841date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1850545" data-time="2025-11-04 10:00">
-                            <time>10:00</time>
-                            <span class="_league">
-                                CS2                            </span>
-                            <span class="_teams">
-                                    LVG                                    <img src="https://duihui.duoduocdn.com/game/LVG.png">
-                                                                            <span>2 - 1</span>
-                                                                        <img src="https://duihui.duoduocdn.com/game/3DMAX.png">
-                                    3DMAX                            </span>
-                            <a href="https://news.zhibo8.com/game/2025-11-04/match1850545vnative.htm" target="_blank">战报 文字</a>                        </li>
-                                        <li label="" id="saishi1793840" data-time="2025-11-04 10:00">
-                            <time>10:00</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    国王                                    <img src="https://duihui.duoduocdn.com/nba/lq_sakelamentuoguowang_273039.png">
-                                                                            <span>124 - 130</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_danfojuejin_776212.png">
-                                    掘金                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793840date2025vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
-                <li label="" id="saishi0" data-time="2025-11-04 10:00"><time>10:00</time><span class="_league">全运会</span><span class="_teams"><img src="http://tu.duoduocdn.com/uploads/day_251031/sc_69042e69479b6.png"></span> <a href="https://news.zhibo8.com/other/2024-04-28/662dc5ad1cb63native.htm" target="_blank">展开</a></li>                        <li label="" id="saishi1846252" data-time="2025-11-04 09:15">
-                            <time>09:15</time>
-                            <span class="_league">
-                                NFL常规赛                            </span>
-                            <span class="_teams">
-                                    红雀                                    <img src="https://duihui.duoduocdn.com/other/logo387bcfc1_20241017.png">
-                                                                            <span>27 - 17</span>
-                                                                        <img src="https://duihui.duoduocdn.com/other/logocea6dfbc_20230112.png">
-                                    牛仔                            </span>
-                            <a href="/tiyu/2025/1104-match1846252v-jijin.htm" target="_blank">集锦 文字</a>                        </li>
-                                        <li label="" id="saishi1793839" data-time="2025-11-04 09:00">
-                            <time>09:00</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    活塞                                    <img src="https://duihui.duoduocdn.com/nba/lq_ditelvhuosai_909995.png">
-                                                                            <span>114 - 106</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_mengfeisihuixiong_447336.png">
-                                    灰熊                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793839date2025vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1793838" data-time="2025-11-04 09:00">
-                            <time>09:00</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    独行侠                                    <img src="https://duihui.duoduocdn.com/nba/lq_dalasiduxingxia_939399.png">
-                                                                            <span>102 - 110</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_xiusidunhuojian_410668.png">
-                                    火箭                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793838date2025vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1793837" data-time="2025-11-04 08:30">
-                            <time>08:30</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    奇才                                    <img src="https://duihui.duoduocdn.com/nba/lq_huashengdunqicai_298271.png">
-                                                                            <span>102 - 119</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_niuyuenikesi_389105.png">
-                                    尼克斯                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793837date2025vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1793836" data-time="2025-11-04 08:30">
-                            <time>08:30</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    爵士                                    <img src="https://duihui.duoduocdn.com/nba/lq_youtajueshi_633174.png">
-                                                                            <span>105 - 103</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_boshidunkaierteren_491431.png">
-                                    凯尔特人                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793836date2025vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1793835" data-time="2025-11-04 08:00">
-                            <time>08:00</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    雄鹿                                    <img src="https://duihui.duoduocdn.com/nba/lq_mierwojixionglu_857501.png">
-                                                                            <span>117 - 115</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_yindiannabuxingzhe_820256.png">
-                                    步行者                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793835date2025vnative.htm" target="_blank">集锦 战报 文字</a>                        </li>
-                                        <li label="" id="saishi1793834" data-time="2025-11-04 08:00">
-                            <time>08:00</time>
-                            <span class="_league">
-                                NBA                            </span>
-                            <span class="_teams">
-                                    森林狼                                    <img src="https://duihui.duoduocdn.com/nba/lq_mingnisudasenlinlang_704031.png">
-                                                                            <span>125 - 109</span>
-                                                                        <img src="https://duihui.duoduocdn.com/nba/lq_bulukelinlanwang_535807.png">
-                                    篮网                            </span>
-                            <a href="https://news.zhibo8.com/nba/2025-11-04/match1793834date2025vnative.htm" target="_blank">集锦 录像 战报 文字</a>                        </li>
                             </ul>
         </div>
     </div>
