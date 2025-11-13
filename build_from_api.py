@@ -6,149 +6,144 @@ from pathlib import Path
 API_HOST = "https://v3.football.api-sports.io"
 API_KEY = os.environ["FOOTBALL_API_KEY"]
 
-# ======= 你的实际配置 =======
-TEAM_ID = 5648                 # Chengdu Better City / 成都蓉城
-CHINA_SUPER_LEAGUE_ID = 169    # Chinese Super League
-CHINA_FA_CUP_ID = 171          # China FA Cup
-ACL_ELITE_ID = 17              # AFC Champions League
-SEASON = 2025                  # 当前赛季年份
-# ===========================
+# 固定参数
+TEAM_ID = 5648
+CHINA_SUPER_LEAGUE_ID = 169
+CHINA_FA_CUP_ID = 171
+ACL_ELITE_ID = 17
+SEASON = 2025
 
 OUTPUT_ICS = Path("蓉城.ics")
 
-# 赛事显示风格（emoji + 中文前缀）
+# ===== 你最终确认的赛事前缀 =====
 COMPETITION_STYLE = {
-    "csl": ("🏟 中超", "中超"),
-    "cup": ("🏆 足协杯", "足协杯"),
-    "acl": ("⭐ 亚冠", "亚冠"),
+    "csl": ("🔥 中超", "中超联赛"),
+    "cup": ("🏆 足协杯", "中国足协杯"),
+    "acl": ("🏆 亚冠", "亚冠联赛"),
 }
 
+# ===== 中文队名映射 =====
+TEAM_NAME_MAP = {
+    "Chengdu Better City": "成都蓉城",
 
-def fetch_fixtures(league_id: int):
-    """
-    从 API-Football 拉取指定联赛 + 赛季 + 球队的全部比赛
-    文档：/fixtures endpoint
-    """
+    # 中超队伍
+    "Shanghai Port": "上海海港",
+    "Shanghai Shenhua": "上海申花",
+    "Beijing Guoan": "北京国安",
+    "Shandong Taishan": "山东泰山",
+    "Tianjin Jinmen Tiger": "天津津门虎",
+    "Changchun Yatai": "长春亚泰",
+    "Henan": "河南队",
+    "Zhejiang Professional": "浙江队",
+    "Zhejiang FC": "浙江队",
+    "Wuhan Three Towns": "武汉三镇",
+    "Meizhou Hakka": "梅州客家",
+    "Shenzhen Peng City": "深圳新鹏城",
+    "Qingdao Hainiu": "青岛海牛",
+    "Qingdao West Coast": "青岛西海岸",
+    "Cangzhou Mighty Lions": "沧州雄狮",
+    "Nantong Zhiyun": "南通支云",
+
+    # 亚冠常见球队
+    "Yokohama F. Marinos": "横滨水手",
+    "Kawasaki Frontale": "川崎前锋",
+    "Ulsan HD": "蔚山现代",
+    "Jeonbuk Motors": "全北现代",
+    "Pohang Steelers": "浦项制铁",
+    "Kitchee": "杰志",
+    "Incheon United": "仁川联",
+    "Buriram United": "武里南联",
+    "Johor Darul Ta'zim": "柔佛新山",
+}
+
+def zh_team(name):
+    return TEAM_NAME_MAP.get(name, name)
+
+def fetch_fixtures(league_id):
     url = f"{API_HOST}/fixtures"
-    headers = {
-        "x-apisports-key": API_KEY,
-    }
-    params = {
-        "league": league_id,
-        "season": SEASON,
-        "team": TEAM_ID,
-    }
+    headers = {"x-apisports-key": API_KEY}
+    params = {"league": league_id, "season": SEASON, "team": TEAM_ID}
     resp = requests.get(url, headers=headers, params=params, timeout=30)
     resp.raise_for_status()
-    data = resp.json()
-    return data.get("response", [])
+    return resp.json().get("response", [])
 
-
-def parse_fixture_time(fix: dict) -> datetime:
-    """
-    fixture.date 一般是 ISO 格式，例如：
-    "2025-11-22T15:30:00+08:00"
-    这里统一转成 UTC 时区的 datetime
-    """
-    date_str = fix["fixture"]["date"]
-    dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+def parse_fixture_time(fix):
+    dt = datetime.fromisoformat(fix["fixture"]["date"].replace("Z", "+00:00"))
     return dt.astimezone(timezone.utc)
 
-
-def build_event(uid: str, title: str, desc: str,
-                start_utc: datetime, duration_minutes: int,
-                location: str) -> str:
-    dtend_utc = start_utc + timedelta(minutes=duration_minutes)
+def build_event(uid, title, desc, start_utc, location):
+    dtend_utc = start_utc + timedelta(minutes=120)
     dtstamp = datetime.utcnow().replace(tzinfo=timezone.utc)
 
-    def fmt(dt: datetime) -> str:
-        return dt.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    def fmt(dt):
+        return dt.strftime("%Y%m%dT%H%M%SZ")
 
-    lines = []
-    lines.append("BEGIN:VEVENT")
-    lines.append(f"UID:{uid}@chengdu-rongcheng")
-    lines.append(f"DTSTAMP:{fmt(dtstamp)}")
-    lines.append(f"DTSTART:{fmt(start_utc)}")
-    lines.append(f"DTEND:{fmt(dtend_utc)}")
-    lines.append(f"SUMMARY:{title}")
-    lines.append(f"DESCRIPTION:{desc}")
-    lines.append(f"LOCATION:{location}")
-    # 比赛前 2 小时提醒
-    lines.append("BEGIN:VALARM")
-    lines.append("TRIGGER:-PT120M")
-    lines.append("ACTION:DISPLAY")
-    lines.append(f"DESCRIPTION:{title}（比赛前2小时提醒）")
-    lines.append("END:VALARM")
-    lines.append("END:VEVENT")
-    return "\n".join(lines)
+    return "\n".join([
+        "BEGIN:VEVENT",
+        f"UID:{uid}@chengdu-rongcheng",
+        f"DTSTAMP:{fmt(dtstamp)}",
+        f"DTSTART:{fmt(start_utc)}",
+        f"DTEND:{fmt(dtend_utc)}",
+        f"SUMMARY:{title}",
+        f"DESCRIPTION:{desc}",
+        f"LOCATION:{location}",
+        "BEGIN:VALARM",
+        "TRIGGER:-PT120M",
+        "ACTION:DISPLAY",
+        f"DESCRIPTION:{title}（比赛前2小时提醒）",
+        "END:VALARM",
+        "END:VEVENT"
+    ])
 
-
-def fixtures_to_events(fixtures, comp_code: str):
-    emoji_title, comp_cn = COMPETITION_STYLE[comp_code]
+def fixtures_to_events(fixtures, comp_code):
+    prefix, comp_cn = COMPETITION_STYLE[comp_code]
     events = []
-
     now_utc = datetime.utcnow().replace(tzinfo=timezone.utc)
 
     for fix in fixtures:
         start_utc = parse_fixture_time(fix)
-        # 只保留未来的比赛
         if start_utc < now_utc:
             continue
 
-        home = fix["teams"]["home"]["name"]
-        away = fix["teams"]["away"]["name"]
-        venue = fix.get("fixture", {}).get("venue", {}) or {}
-        location = venue.get("name") or "待定"
+        home_en = fix["teams"]["home"]["name"]
+        away_en = fix["teams"]["away"]["name"]
+        home = zh_team(home_en)
+        away = zh_team(away_en)
 
-        # 这里先用英文队名，后面想要汉化可以再加映射表
-        title = f"{emoji_title}：{home} vs {away}"
-        desc = f"{comp_cn} - {home} vs {away}"
+        venue = fix["fixture"].get("venue", {}).get("name") or "待定球场"
 
-        uid = f"{start_utc:%Y%m%dT%H%M%S}-{home}-{away}".replace(" ", "")
+        if fix["teams"]["home"]["id"] == TEAM_ID:
+            home_away = "主场"
+        else:
+            home_away = "客场"
 
-        event_text = build_event(
-            uid=uid,
-            title=title,
-            desc=desc,
-            start_utc=start_utc,
-            duration_minutes=120,
-            location=location,
-        )
-        events.append(event_text)
+        title = f"{prefix} | {home} vs {away}（{home_away}）"
+
+        round_name = fix.get("league", {}).get("round") or "待定轮次"
+        desc = "\\n".join([
+            f"赛事：{comp_cn}",
+            f"轮次：{round_name}",
+            f"比赛：{home} vs {away}",
+            f"主客：{home_away}",
+            f"球场：{venue}",
+        ])
+
+        uid = f"{start_utc:%Y%m%dT%H%M%S}-{home_en}-{away_en}".replace(" ", "")
+        events.append(build_event(uid, title, desc, start_utc, venue))
 
     return events
 
-
 def main():
     all_events = []
+    all_events += fixtures_to_events(fetch_fixtures(CHINA_SUPER_LEAGUE_ID), "csl")
+    all_events += fixtures_to_events(fetch_fixtures(CHINA_FA_CUP_ID), "cup")
+    all_events += fixtures_to_events(fetch_fixtures(ACL_ELITE_ID), "acl")
 
-    # 中超
-    if CHINA_SUPER_LEAGUE_ID:
-        csl_fixtures = fetch_fixtures(CHINA_SUPER_LEAGUE_ID)
-        all_events.extend(fixtures_to_events(csl_fixtures, "csl"))
-
-    # 足协杯
-    if CHINA_FA_CUP_ID:
-        cup_fixtures = fetch_fixtures(CHINA_FA_CUP_ID)
-        all_events.extend(fixtures_to_events(cup_fixtures, "cup"))
-
-    # 亚冠
-    if ACL_ELITE_ID:
-        acl_fixtures = fetch_fixtures(ACL_ELITE_ID)
-        all_events.extend(fixtures_to_events(acl_fixtures, "acl"))
-
-    lines = []
-    lines.append("BEGIN:VCALENDAR")
-    lines.append("VERSION:2.0")
-    lines.append("PRODID:-//LouisZeng//ChengduRongchengAPI//CN")
-    lines.append("CALSCALE:GREGORIAN")
-    lines.append("METHOD:PUBLISH")
-    lines.extend(all_events)
-    lines.append("END:VCALENDAR")
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "CALSCALE:GREGORIAN", "METHOD:PUBLISH"] \
+            + all_events + ["END:VCALENDAR"]
 
     OUTPUT_ICS.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"已生成 {OUTPUT_ICS}，共 {len(all_events)} 场未来比赛。")
-
 
 if __name__ == "__main__":
     main()
