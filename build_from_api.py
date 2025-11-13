@@ -11,18 +11,18 @@ TEAM_ID = 5648
 CHINA_SUPER_LEAGUE_ID = 169
 CHINA_FA_CUP_ID = 171
 ACL_ELITE_ID = 17
-SEASON = 2024
+SEASON = 2025          # 想看 2024 就改成 2024
 
 OUTPUT_ICS = Path("蓉城.ics")
 
-# ===== 你最终确认的赛事前缀 =====
+# 你定下来的标题前缀样式
 COMPETITION_STYLE = {
     "csl": ("🔥 中超", "中超联赛"),
     "cup": ("🏆 足协杯", "中国足协杯"),
     "acl": ("🏆 亚冠", "亚冠联赛"),
 }
 
-# ===== 中文队名映射 =====
+# 中文队名映射
 TEAM_NAME_MAP = {
     "Chengdu Better City": "成都蓉城",
 
@@ -56,26 +56,30 @@ TEAM_NAME_MAP = {
     "Johor Darul Ta'zim": "柔佛新山",
 }
 
-def zh_team(name):
+def zh_team(name: str) -> str:
     return TEAM_NAME_MAP.get(name, name)
 
-def fetch_fixtures(league_id):
+def fetch_fixtures(league_id: int):
     url = f"{API_HOST}/fixtures"
     headers = {"x-apisports-key": API_KEY}
     params = {"league": league_id, "season": SEASON, "team": TEAM_ID}
     resp = requests.get(url, headers=headers, params=params, timeout=30)
     resp.raise_for_status()
-    return resp.json().get("response", [])
+    data = resp.json()
+    fixtures = data.get("response", [])
+    print(f"[调试] league={league_id}, season={SEASON}, team={TEAM_ID} -> {len(fixtures)} 场比赛(含已结束)")
+    return fixtures
 
-def parse_fixture_time(fix):
+def parse_fixture_time(fix: dict) -> datetime:
     dt = datetime.fromisoformat(fix["fixture"]["date"].replace("Z", "+00:00"))
     return dt.astimezone(timezone.utc)
 
-def build_event(uid, title, desc, start_utc, location):
+def build_event(uid: str, title: str, desc: str,
+                start_utc: datetime, location: str) -> str:
     dtend_utc = start_utc + timedelta(minutes=120)
     dtstamp = datetime.utcnow().replace(tzinfo=timezone.utc)
 
-    def fmt(dt):
+    def fmt(dt: datetime) -> str:
         return dt.strftime("%Y%m%dT%H%M%SZ")
 
     return "\n".join([
@@ -87,23 +91,21 @@ def build_event(uid, title, desc, start_utc, location):
         f"SUMMARY:{title}",
         f"DESCRIPTION:{desc}",
         f"LOCATION:{location}",
+        # 还是保留一个赛前 2 小时提醒，时间在过去的日历自己不会响
         "BEGIN:VALARM",
         "TRIGGER:-PT120M",
         "ACTION:DISPLAY",
         f"DESCRIPTION:{title}（比赛前2小时提醒）",
         "END:VALARM",
-        "END:VEVENT"
+        "END:VEVENT",
     ])
 
-def fixtures_to_events(fixtures, comp_code):
+def fixtures_to_events(fixtures, comp_code: str):
     prefix, comp_cn = COMPETITION_STYLE[comp_code]
     events = []
-    now_utc = datetime.utcnow().replace(tzinfo=timezone.utc)
 
     for fix in fixtures:
         start_utc = parse_fixture_time(fix)
-        if start_utc < now_utc:
-            continue
 
         home_en = fix["teams"]["home"]["name"]
         away_en = fix["teams"]["away"]["name"]
@@ -139,11 +141,15 @@ def main():
     all_events += fixtures_to_events(fetch_fixtures(CHINA_FA_CUP_ID), "cup")
     all_events += fixtures_to_events(fetch_fixtures(ACL_ELITE_ID), "acl")
 
-    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "CALSCALE:GREGORIAN", "METHOD:PUBLISH"] \
-            + all_events + ["END:VCALENDAR"]
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+    ] + all_events + ["END:VCALENDAR"]
 
     OUTPUT_ICS.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"已生成 {OUTPUT_ICS}，共 {len(all_events)} 场未来比赛。")
+    print(f"已生成 {OUTPUT_ICS}，共 {len(all_events)} 场比赛（含已结束）。")
 
 if __name__ == "__main__":
     main()
