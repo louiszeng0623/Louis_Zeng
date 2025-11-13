@@ -1,0 +1,42 @@
+name: Update Rongcheng Calendar from API
+
+on:
+  schedule:
+    - cron: "0 18 * * 0"   # 每周一北京时间 02:00 左右（周日 18:00 UTC）
+  workflow_dispatch:       # 你可以在 Actions 页面手动点一次运行
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Build ICS from API
+        env:
+          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
+        run: python build_from_api.py
+
+      - name: Commit changes if any
+        run: |
+          if git status --porcelain | grep -q "蓉城.ics"; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add 蓉城.ics
+            git commit -m "Auto update Rongcheng calendar from API-Football"
+            git push
+          else
+            echo "No changes in 蓉城.ics"
+          fi
